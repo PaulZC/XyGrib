@@ -1,5 +1,9 @@
-# XyGrib - Weather Forecast Visualization
+﻿# XyGrib - Weather Forecast Visualization
 Fork of zyGrib-8.0.1 under a new name and a new home https://opengribs.org
+
+This fork is based on version 1.2.8 and adds extra altitudes / pressure levels for high altitude balloons:
+
+![Screenshot](https://github.com/PaulZC/XyGrib/blob/master/Screenshot.png)
 
 Changes in version 1.2.8
 - Chinese translation added. Thanks to 张 树奎

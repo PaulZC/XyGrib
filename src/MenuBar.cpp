@@ -179,6 +179,13 @@ MenuBar::MenuBar (QWidget *parent, bool mbe)
 			acAlt_400hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("400 hPa (≈ 7200 m)"), "", "");
 			acAlt_300hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("300 hPa (≈ 9200 m)"), "", "");
 			acAlt_200hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("200 hPa (≈ 11800 m)"), "", "");
+			acAlt_100hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("100 hPa (≈ 16200 m)"), "", "");
+			acAlt_50hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("50 hPa (≈ 20650 m)"), "", "");
+			acAlt_20hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("20 hPa (≈ 26400 m)"), "", "");
+			acAlt_10hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("10 hPa (≈ 31000 m)"), "", "");
+			acAlt_7hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("7 hPa (≈ 33500 m)"), "", "");
+			acAlt_5hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("5 hPa (≈ 35950 m)"), "", "");
+			acAlt_3hpa = addGroup (acAlt_GroupAltitude, menuAltitude, tr("3 hPa (≈ 39800 m)"), "", "");
 			acAlt_Atmosphere = addGroup (acAlt_GroupAltitude, menuAltitude, tr("Atmosphere"), "", "");
     //======================================================================
     menuIsolines = new QMenu (tr("Isolines"));
@@ -205,6 +212,9 @@ MenuBar::MenuBar (QWidget *parent, bool mbe)
 		menuIsotherms0Step = new QMenu(tr("Isotherms 0°C spacing (m)"));
 		acView_GroupIsotherms0Step    = new QActionGroup(menuIsotherms0Step);
 		menuIsolines->addMenu(menuIsotherms0Step);
+			acView_Isotherms0Step1   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("1"), "", "");
+			acView_Isotherms0Step2   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("2"), "", "");
+			acView_Isotherms0Step5   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("5"), "", "");
 			acView_Isotherms0Step10   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("10"), "", "");
 			acView_Isotherms0Step20   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("20"), "", "");
 			acView_Isotherms0Step50   = addGroup (acView_GroupIsotherms0Step, menuIsotherms0Step, tr("50"), "", "");
@@ -227,6 +237,13 @@ MenuBar::MenuBar (QWidget *parent, bool mbe)
 			acView_Isotherms_400hpa = addGroup (groupIsotherms, menuIsotherms, tr("400 hpa"), "", "");
 			acView_Isotherms_300hpa = addGroup (groupIsotherms, menuIsotherms, tr("300 hpa"), "", "");
 			acView_Isotherms_200hpa = addGroup (groupIsotherms, menuIsotherms, tr("200 hpa"), "", "");
+			acView_Isotherms_100hpa = addGroup (groupIsotherms, menuIsotherms, tr("100 hpa"), "", "");
+			acView_Isotherms_50hpa = addGroup (groupIsotherms, menuIsotherms, tr("50 hpa"), "", "");
+			acView_Isotherms_20hpa = addGroup (groupIsotherms, menuIsotherms, tr("20 hpa"), "", "");
+			acView_Isotherms_10hpa = addGroup (groupIsotherms, menuIsotherms, tr("10 hpa"), "", "");
+			acView_Isotherms_7hpa = addGroup (groupIsotherms, menuIsotherms, tr("7 hpa"), "", "");
+			acView_Isotherms_5hpa = addGroup (groupIsotherms, menuIsotherms, tr("5 hpa"), "", "");
+			acView_Isotherms_3hpa = addGroup (groupIsotherms, menuIsotherms, tr("3 hpa"), "", "");
 		menuIsotherms_Step = new QMenu(tr("Isotherms spacing (°C)"));
 		groupIsotherms_Step = new QActionGroup(menuIsotherms_Step);
 			acView_Isotherms_Step1 = addGroup (groupIsotherms_Step, menuIsotherms_Step, tr("1"), "", "");
@@ -248,6 +265,13 @@ MenuBar::MenuBar (QWidget *parent, bool mbe)
 			acAlt_GeopotLine_400hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("400 hpa"), "", "");
 			acAlt_GeopotLine_300hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("300 hpa"), "", "");
 			acAlt_GeopotLine_200hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("200 hpa"), "", "");
+			acAlt_GeopotLine_100hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("100 hpa"), "", "");
+			acAlt_GeopotLine_50hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("50 hpa"), "", "");
+			acAlt_GeopotLine_20hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("20 hpa"), "", "");
+			acAlt_GeopotLine_10hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("10 hpa"), "", "");
+			acAlt_GeopotLine_7hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("7 hpa"), "", "");
+			acAlt_GeopotLine_5hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("5 hpa"), "", "");
+			acAlt_GeopotLine_3hpa = addGroup (acAlt_GroupGeopotLine, menutmp, tr("3 hpa"), "", "");
 			menuGeopotStep = new QMenu(tr("Geopotentials spacing (m)"));
             acAlt_GroupGeopotStep = new QActionGroup (menuGeopotStep);
                 acAlt_GeopotStep_1  = addGroup (acAlt_GroupGeopotStep, menuGeopotStep, tr("1"), "", "");
@@ -272,6 +296,13 @@ MenuBar::MenuBar (QWidget *parent, bool mbe)
 			acView_LinesThetaE_400hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("400 hpa"), "", "");
 			acView_LinesThetaE_300hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("300 hpa"), "", "");
 			acView_LinesThetaE_200hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("200 hpa"), "", "");
+			acView_LinesThetaE_100hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("100 hpa"), "", "");
+			acView_LinesThetaE_50hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("50 hpa"), "", "");
+			acView_LinesThetaE_20hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("20 hpa"), "", "");
+			acView_LinesThetaE_10hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("10 hpa"), "", "");
+			acView_LinesThetaE_7hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("7 hpa"), "", "");
+			acView_LinesThetaE_5hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("5 hpa"), "", "");
+			acView_LinesThetaE_3hpa = addGroup (groupLinesThetaE, menuLinesThetaE, tr("3 hpa"), "", "");
 		menuLinesThetaE_Step = new QMenu(tr("Theta-e spacing (°C)"));
 		groupLinesThetaE_Step = new QActionGroup(menuLinesThetaE_Step);
 			acView_LinesThetaE_Step1 = addGroup (groupLinesThetaE_Step, menuLinesThetaE_Step, tr("1"), "", "");
@@ -611,6 +642,9 @@ void MenuBar::setIsobarsStep (int step) {
 //-------------------------------------------------
 void MenuBar::setIsotherms0Step (int step) {
     switch (step) {
+        case 1: acView_Isotherms0Step1->setChecked(true); break;
+        case 2: acView_Isotherms0Step2->setChecked(true); break;
+        case 5: acView_Isotherms0Step5->setChecked(true); break;
         case 10: acView_Isotherms0Step10->setChecked(true); break;
         case 20: acView_Isotherms0Step20->setChecked(true); break;
         case 50: acView_Isotherms0Step50->setChecked(true); break;

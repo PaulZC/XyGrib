@@ -140,6 +140,13 @@ void MainWindow::InitActionsStatus ()
     menuBar->acView_Isotherms_500hpa->setChecked (Util::getSetting("showIsotherms_400hpa", false).toBool());
     menuBar->acView_Isotherms_300hpa->setChecked (Util::getSetting("showIsotherms_300hpa", false).toBool());
     menuBar->acView_Isotherms_200hpa->setChecked (Util::getSetting("showIsotherms_200hpa", false).toBool());
+    menuBar->acView_Isotherms_100hpa->setChecked (Util::getSetting("showIsotherms_100hpa", false).toBool());
+    menuBar->acView_Isotherms_50hpa->setChecked (Util::getSetting("showIsotherms_50hpa", false).toBool());
+    menuBar->acView_Isotherms_20hpa->setChecked (Util::getSetting("showIsotherms_20hpa", false).toBool());
+    menuBar->acView_Isotherms_10hpa->setChecked (Util::getSetting("showIsotherms_10hpa", false).toBool());
+    menuBar->acView_Isotherms_7hpa->setChecked (Util::getSetting("showIsotherms_7hpa", false).toBool());
+    menuBar->acView_Isotherms_5hpa->setChecked (Util::getSetting("showIsotherms_5hpa", false).toBool());
+    menuBar->acView_Isotherms_3hpa->setChecked (Util::getSetting("showIsotherms_3hpa", false).toBool());
 	//--------------------------------------------
     menuBar->setLinesThetaE_Step (Util::getSetting("linesThetaE_Step", 2).toDouble());
     terre->setLinesThetaE_Step (Util::getSetting("linesThetaE_Step", 2).toDouble());
@@ -148,11 +155,18 @@ void MainWindow::InitActionsStatus ()
     menuBar->acView_LinesThetaE_925hpa->setChecked (Util::getSetting("showLinesThetaE_925hpa", false).toBool());
     menuBar->acView_LinesThetaE_850hpa->setChecked (Util::getSetting("showLinesThetaE_850hpa", false).toBool());
     menuBar->acView_LinesThetaE_700hpa->setChecked (Util::getSetting("showLinesThetaE_700hpa", false).toBool());
-    menuBar->acView_LinesThetaE_600hpa->setChecked (Util::getSetting("showLinesThetaE_500hpa", false).toBool());
+    menuBar->acView_LinesThetaE_600hpa->setChecked (Util::getSetting("showLinesThetaE_600hpa", false).toBool());
     menuBar->acView_LinesThetaE_500hpa->setChecked (Util::getSetting("showLinesThetaE_500hpa", false).toBool());
-    menuBar->acView_LinesThetaE_400hpa->setChecked (Util::getSetting("showLinesThetaE_500hpa", false).toBool());
+    menuBar->acView_LinesThetaE_400hpa->setChecked (Util::getSetting("showLinesThetaE_400hpa", false).toBool());
     menuBar->acView_LinesThetaE_300hpa->setChecked (Util::getSetting("showLinesThetaE_300hpa", false).toBool());
     menuBar->acView_LinesThetaE_200hpa->setChecked (Util::getSetting("showLinesThetaE_200hpa", false).toBool());
+    menuBar->acView_LinesThetaE_100hpa->setChecked (Util::getSetting("showLinesThetaE_100hpa", false).toBool());
+    menuBar->acView_LinesThetaE_50hpa->setChecked (Util::getSetting("showLinesThetaE_50hpa", false).toBool());
+    menuBar->acView_LinesThetaE_20hpa->setChecked (Util::getSetting("showLinesThetaE_20hpa", false).toBool());
+    menuBar->acView_LinesThetaE_10hpa->setChecked (Util::getSetting("showLinesThetaE_10hpa", false).toBool());
+    menuBar->acView_LinesThetaE_7hpa->setChecked (Util::getSetting("showLinesThetaE_7hpa", false).toBool());
+    menuBar->acView_LinesThetaE_5hpa->setChecked (Util::getSetting("showLinesThetaE_5hpa", false).toBool());
+    menuBar->acView_LinesThetaE_3hpa->setChecked (Util::getSetting("showLinesThetaE_3hpa", false).toBool());
 	//--------------------------------------------
     menuBar->acView_GribGrid->setChecked(Util::getSetting("showGribGrid", false).toBool());
     menuBar->acView_TemperatureLabels->setChecked(Util::getSetting("showTemperatureLabels", false).toBool());
@@ -740,11 +754,18 @@ void MainWindow::disableMenubarItems()
 	menuBar->acView_Isotherms_925hpa->setEnabled (false);
 	menuBar->acView_Isotherms_850hpa->setEnabled (false);
 	menuBar->acView_Isotherms_700hpa->setEnabled (false);
+	menuBar->acView_Isotherms_600hpa->setEnabled (false);
 	menuBar->acView_Isotherms_500hpa->setEnabled (false);
+	menuBar->acView_Isotherms_400hpa->setEnabled (false);
 	menuBar->acView_Isotherms_300hpa->setEnabled (false);
 	menuBar->acView_Isotherms_200hpa->setEnabled (false);
-	menuBar->acView_Isotherms_400hpa->setEnabled (false);
-	menuBar->acView_Isotherms_600hpa->setEnabled (false);
+	menuBar->acView_Isotherms_100hpa->setEnabled (false);
+	menuBar->acView_Isotherms_50hpa->setEnabled (false);
+	menuBar->acView_Isotherms_20hpa->setEnabled (false);
+	menuBar->acView_Isotherms_10hpa->setEnabled (false);
+	menuBar->acView_Isotherms_7hpa->setEnabled (false);
+	menuBar->acView_Isotherms_5hpa->setEnabled (false);
+	menuBar->acView_Isotherms_3hpa->setEnabled (false);
 	menuBar->menuIsotherms->setEnabled (false);
 	menuBar->acView_Isotherms_Labels->setEnabled (false);
 	menuBar->menuIsotherms_Step->setEnabled (false);
@@ -753,11 +774,18 @@ void MainWindow::disableMenubarItems()
 	menuBar->acAlt_GeopotLine_925hpa->setEnabled (false);
 	menuBar->acAlt_GeopotLine_850hpa->setEnabled (false);
 	menuBar->acAlt_GeopotLine_700hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_600hpa->setEnabled (false);
 	menuBar->acAlt_GeopotLine_500hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_400hpa->setEnabled (false);
 	menuBar->acAlt_GeopotLine_300hpa->setEnabled (false);
 	menuBar->acAlt_GeopotLine_200hpa->setEnabled (false);
-	menuBar->acAlt_GeopotLine_400hpa->setEnabled (false);
-	menuBar->acAlt_GeopotLine_600hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_100hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_50hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_20hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_10hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_7hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_5hpa->setEnabled (false);
+	menuBar->acAlt_GeopotLine_3hpa->setEnabled (false);
 	menuBar->menuGeopotStep->setEnabled (false);
 	menuBar->acAlt_GeopotLabels->setEnabled (false);
 
@@ -846,7 +874,7 @@ void MainWindow::setMenubarItems()
     	menuBar->menuIsotherms0Step->setEnabled(true);
     }
 	//------------------------------------------------
-	bool ok2,ok3,ok4,ok5,ok6,ok7,ok8,ok9,ok10,ok11;
+	bool ok2,ok3,ok4,ok5,ok6,ok7,ok8,ok9,ok10,ok11,ok12,ok13,ok14,ok15,ok16,ok17,ok18;
 	ok2 = plotter->hasData (GRB_TEMP,LV_ABOV_GND,2);
 	if (ok2) menuBar->acView_Isotherms_2m->setEnabled (ok2);
 
@@ -859,22 +887,43 @@ void MainWindow::setMenubarItems()
 	ok5 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,700);
 	if (ok5) menuBar->acView_Isotherms_700hpa->setEnabled (ok5);
 
-	ok6 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,500);
-	if (ok6) menuBar->acView_Isotherms_500hpa->setEnabled (ok6);
+	ok6 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,600);
+	if (ok6) menuBar->acView_Isotherms_600hpa->setEnabled (ok6);
 
-	ok7 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,300);
-	if (ok7) menuBar->acView_Isotherms_300hpa->setEnabled (ok7);
+	ok7 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,500);
+	if (ok7) menuBar->acView_Isotherms_500hpa->setEnabled (ok7);
 
-	ok8 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,200);
-	if (ok8) menuBar->acView_Isotherms_200hpa->setEnabled (ok8);
+	ok8 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,400);
+	if (ok8) menuBar->acView_Isotherms_400hpa->setEnabled (ok8);
 
-	ok9 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,400);
-	if (ok9) menuBar->acView_Isotherms_400hpa->setEnabled (ok9);
+	ok9 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,300);
+	if (ok9) menuBar->acView_Isotherms_300hpa->setEnabled (ok9);
 
-	ok10 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,600);
-	if (ok10) menuBar->acView_Isotherms_600hpa->setEnabled (ok10);
+	ok10 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,200);
+	if (ok10) menuBar->acView_Isotherms_200hpa->setEnabled (ok10);
 
-	ok = ok2 || ok3 || ok4 || ok5 || ok6 || ok7 || ok8 || ok9 || ok10;
+	ok11 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,100);
+	if (ok11) menuBar->acView_Isotherms_100hpa->setEnabled (ok11);
+
+	ok12 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,50);
+	if (ok12) menuBar->acView_Isotherms_50hpa->setEnabled (ok12);
+
+	ok13 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,20);
+	if (ok13) menuBar->acView_Isotherms_20hpa->setEnabled (ok13);
+
+	ok14 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,10);
+	if (ok14) menuBar->acView_Isotherms_10hpa->setEnabled (ok14);
+
+	ok15 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,7);
+	if (ok15) menuBar->acView_Isotherms_7hpa->setEnabled (ok15);
+
+	ok16 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,5);
+	if (ok16) menuBar->acView_Isotherms_5hpa->setEnabled (ok16);
+
+	ok17 = plotter->hasData (GRB_TEMP,LV_ISOBARIC,3);
+	if (ok17) menuBar->acView_Isotherms_3hpa->setEnabled (ok17);
+
+	ok = ok2 || ok3 || ok4 || ok5 || ok6 || ok7 || ok8 || ok9 || ok10 || ok11 || ok12 || ok13 || ok14 || ok15 || ok16 || ok17;
 	if (ok) {
     	menuBar->menuIsotherms->setEnabled (ok);
     	menuBar->acView_Isotherms_Labels->setEnabled (ok);
@@ -882,31 +931,52 @@ void MainWindow::setMenubarItems()
     }
 
 	// Set altitude menus
-	ok9 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,925);
-	if (ok9) menuBar->acAlt_GeopotLine_925hpa->setEnabled (ok9);
+	ok2 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,925);
+	if (ok2) menuBar->acAlt_GeopotLine_925hpa->setEnabled (ok2);
 
-	ok8 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,850);
-	if (ok8) menuBar->acAlt_GeopotLine_850hpa->setEnabled (ok8);
+	ok3 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,850);
+	if (ok3) menuBar->acAlt_GeopotLine_850hpa->setEnabled (ok3);
 
-	ok7 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,700);
-	if (ok7) menuBar->acAlt_GeopotLine_700hpa->setEnabled (ok7);
+	ok4 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,700);
+	if (ok4) menuBar->acAlt_GeopotLine_700hpa->setEnabled (ok4);
 
-	ok5 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,500);
-	if (ok5) menuBar->acAlt_GeopotLine_500hpa->setEnabled (ok5);
+	ok5 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,600);
+	if (ok5) menuBar->acAlt_GeopotLine_600hpa->setEnabled (ok5);
 
-	ok3 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,300);
-	if (ok3) menuBar->acAlt_GeopotLine_300hpa->setEnabled (ok3);
+	ok6 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,500);
+	if (ok6) menuBar->acAlt_GeopotLine_500hpa->setEnabled (ok6);
 
-	ok2 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,200);
-	if (ok2) menuBar->acAlt_GeopotLine_200hpa->setEnabled (ok2);
+	ok7 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,400);
+	if (ok7) menuBar->acAlt_GeopotLine_400hpa->setEnabled (ok7);
 
-	ok10 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,400);
-	if (ok10) menuBar->acAlt_GeopotLine_400hpa->setEnabled (ok10);
+	ok8 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,300);
+	if (ok8) menuBar->acAlt_GeopotLine_300hpa->setEnabled (ok8);
 
-	ok11 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,600);
-	if (ok11) menuBar->acAlt_GeopotLine_600hpa->setEnabled (ok11);
+	ok9 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,200);
+	if (ok9) menuBar->acAlt_GeopotLine_200hpa->setEnabled (ok9);
 
-	ok = ok9 || ok8 || ok7 || ok5 || ok3 || ok2 || ok10 || ok11;
+	ok10 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,100);
+	if (ok10) menuBar->acAlt_GeopotLine_100hpa->setEnabled (ok10);
+
+	ok11 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,50);
+	if (ok11) menuBar->acAlt_GeopotLine_50hpa->setEnabled (ok11);
+
+	ok12 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,20);
+	if (ok12) menuBar->acAlt_GeopotLine_20hpa->setEnabled (ok12);
+
+	ok13 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,10);
+	if (ok13) menuBar->acAlt_GeopotLine_10hpa->setEnabled (ok13);
+
+	ok14 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,7);
+	if (ok14) menuBar->acAlt_GeopotLine_7hpa->setEnabled (ok14);
+
+	ok15 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,5);
+	if (ok15) menuBar->acAlt_GeopotLine_5hpa->setEnabled (ok15);
+
+	ok16 = plotter->hasData (GRB_GEOPOT_HGT,LV_ISOBARIC,3);
+	if (ok16) menuBar->acAlt_GeopotLine_3hpa->setEnabled (ok16);
+
+	ok = ok2 || ok3 || ok4 || ok5 || ok6 || ok7 || ok8 || ok9 || ok10 || ok11 || ok12 || ok13 || ok14 || ok15 || ok16;
 	if (ok) {
     	menuBar->menuGeopotStep->setEnabled (ok);
     	menuBar->acAlt_GeopotLabels->setEnabled (ok);
@@ -1373,8 +1443,14 @@ void MainWindow::slotIsotherms0Step ()
     int s = 100;
     MenuBar  *mb = menuBar;
     QAction *act = mb->acView_GroupIsotherms0Step->checkedAction();
-    if (act == mb->acView_Isotherms0Step10)
-        s = 10;
+    if (act == mb->acView_Isotherms0Step1)
+        s = 1;
+    else if (act == mb->acView_Isotherms0Step2)
+		s = 2;
+    else if (act == mb->acView_Isotherms0Step5)
+		s = 5;
+    else if (act == mb->acView_Isotherms0Step10)
+		s = 10;
     else if (act == mb->acView_Isotherms0Step20)
         s = 20;
     else if (act == mb->acView_Isotherms0Step50)
@@ -1431,10 +1507,18 @@ void MainWindow::slotGroupIsotherms (QAction *ac)
 	Util::setSetting ("showIsotherms_600hpa", false, false);
 	Util::setSetting ("showIsotherms_500hpa", false, false);
 	Util::setSetting ("showIsotherms_400hpa", false, false);
-	Util::setSetting ("showIsotherms_300hpa", false);
+	Util::setSetting ("showIsotherms_300hpa", false, false);
+	Util::setSetting ("showIsotherms_200hpa", false, false);
+	Util::setSetting ("showIsotherms_100hpa", false, false);
+	Util::setSetting ("showIsotherms_50hpa", false, false);
+	Util::setSetting ("showIsotherms_20hpa", false, false);
+	Util::setSetting ("showIsotherms_10hpa", false, false);
+	Util::setSetting ("showIsotherms_7hpa", false, false);
+	Util::setSetting ("showIsotherms_5hpa", false, false);
+	Util::setSetting ("showIsotherms_3hpa", false);
 	if (ac && ac->isChecked()) {
 		Altitude alt;
-		Util::setSetting ("showIsotherms_200hpa", false, false);
+//		Util::setSetting ("showIsotherms_200hpa", false, false);
 		if (ac == menuBar->acView_Isotherms_2m) {
 			alt = Altitude (LV_ABOV_GND,2);
 			Util::setSetting ("showIsotherms_2m", true);
@@ -1471,6 +1555,34 @@ void MainWindow::slotGroupIsotherms (QAction *ac)
 			alt = Altitude (LV_ISOBARIC,200);
 			Util::setSetting ("showIsotherms_200hpa", true);
 		}
+		else if (ac == menuBar->acView_Isotherms_100hpa) {
+			alt = Altitude (LV_ISOBARIC,100);
+			Util::setSetting ("showIsotherms_100hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_50hpa) {
+			alt = Altitude (LV_ISOBARIC,50);
+			Util::setSetting ("showIsotherms_50hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_20hpa) {
+			alt = Altitude (LV_ISOBARIC,20);
+			Util::setSetting ("showIsotherms_20hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_10hpa) {
+			alt = Altitude (LV_ISOBARIC,10);
+			Util::setSetting ("showIsotherms_10hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_7hpa) {
+			alt = Altitude (LV_ISOBARIC,7);
+			Util::setSetting ("showIsotherms_7hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_5hpa) {
+			alt = Altitude (LV_ISOBARIC,5);
+			Util::setSetting ("showIsotherms_5hpa", true);
+		}
+		else if (ac == menuBar->acView_Isotherms_3hpa) {
+			alt = Altitude (LV_ISOBARIC,3);
+			Util::setSetting ("showIsotherms_3hpa", true);
+		}
 		terre->setIsotherms_Altitude (alt);
 		terre->setDrawIsotherms (true);
 		//DBGQS ("MainWindow Alt = "+AltitudeStr::toString (alt));
@@ -1489,7 +1601,14 @@ void MainWindow::slotGroupLinesThetaE (QAction *ac)
 	Util::setSetting ("showLinesThetaE_500hpa", false, false);
 	Util::setSetting ("showLinesThetaE_400hpa", false, false);
 	Util::setSetting ("showLinesThetaE_300hpa", false, false);
-	Util::setSetting ("showLinesThetaE_200hpa", false);
+	Util::setSetting ("showLinesThetaE_200hpa", false, false);
+	Util::setSetting ("showLinesThetaE_100hpa", false, false);
+	Util::setSetting ("showLinesThetaE_50hpa", false, false);
+	Util::setSetting ("showLinesThetaE_20hpa", false, false);
+	Util::setSetting ("showLinesThetaE_10hpa", false, false);
+	Util::setSetting ("showLinesThetaE_7hpa", false, false);
+	Util::setSetting ("showLinesThetaE_5hpa", false, false);
+	Util::setSetting ("showLinesThetaE_3hpa", false);
 	if (ac) {
 		Altitude alt;
 		if (ac == menuBar->acView_LinesThetaE_925hpa) {
@@ -1523,6 +1642,34 @@ void MainWindow::slotGroupLinesThetaE (QAction *ac)
 		else if (ac == menuBar->acView_LinesThetaE_200hpa) {
 			alt = Altitude (LV_ISOBARIC,200);
 			Util::setSetting ("showLinesThetaE_200hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_100hpa) {
+			alt = Altitude (LV_ISOBARIC,100);
+			Util::setSetting ("showLinesThetaE_100hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_50hpa) {
+			alt = Altitude (LV_ISOBARIC,50);
+			Util::setSetting ("showLinesThetaE_50hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_20hpa) {
+			alt = Altitude (LV_ISOBARIC,20);
+			Util::setSetting ("showLinesThetaE_20hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_10hpa) {
+			alt = Altitude (LV_ISOBARIC,10);
+			Util::setSetting ("showLinesThetaE_10hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_7hpa) {
+			alt = Altitude (LV_ISOBARIC,7);
+			Util::setSetting ("showLinesThetaE_7hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_5hpa) {
+			alt = Altitude (LV_ISOBARIC,5);
+			Util::setSetting ("showLinesThetaE_5hpa", true);
+		}
+		else if (ac == menuBar->acView_LinesThetaE_3hpa) {
+			alt = Altitude (LV_ISOBARIC,3);
+			Util::setSetting ("showLinesThetaE_3hpa", true);
 		}
 		terre->setLinesThetaE_Altitude (alt);
 		terre->setDrawLinesThetaE (true);
@@ -2036,7 +2183,7 @@ preferedIsobaricLevel(int dataType, GriddedReader *reader)
 {
 	DataCode dtc;
     dtc.set (GRB_TYPE_NOT_DEFINED, LV_TYPE_NOT_DEFINED, 0);
-	for (auto level : {925, 850, 700, 600, 500, 400, 300, 200 } ) {
+	for (auto level : {925, 850, 700, 600, 500, 400, 300, 200, 100, 50, 20, 10, 7, 5, 3} ) {
         dtc.set (dataType, LV_ISOBARIC, level);
         if (reader->hasData(dtc))
             break;
@@ -2213,6 +2360,20 @@ void MainWindow::slot_GroupAltitude (QAction *act)
 		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 300);
     else if (act == mb->acAlt_200hpa)
 		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 200);
+    else if (act == mb->acAlt_100hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 100);
+    else if (act == mb->acAlt_50hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 50);
+    else if (act == mb->acAlt_20hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 20);
+    else if (act == mb->acAlt_10hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 10);
+    else if (act == mb->acAlt_7hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 7);
+    else if (act == mb->acAlt_5hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 5);
+    else if (act == mb->acAlt_3hpa)
+		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ISOBARIC, 3);
     else if (act == mb->acAlt_Atmosphere)
 		dtcaltitude.set (GRB_TYPE_NOT_DEFINED, LV_ATMOS_ALL, 0);
 	else
@@ -2253,6 +2414,13 @@ void MainWindow::setMenubarAltitudeData (DataCode dtc)
 	mb->acAlt_400hpa ->setEnabled (false);
 	mb->acAlt_300hpa ->setEnabled (false);
 	mb->acAlt_200hpa ->setEnabled (false);
+	mb->acAlt_100hpa ->setEnabled (false);
+	mb->acAlt_50hpa ->setEnabled (false);
+	mb->acAlt_20hpa ->setEnabled (false);
+	mb->acAlt_10hpa ->setEnabled (false);
+	mb->acAlt_7hpa ->setEnabled (false);
+	mb->acAlt_5hpa ->setEnabled (false);
+	mb->acAlt_3hpa ->setEnabled (false);
 	mb->acAlt_Atmosphere ->setEnabled (false);
 
 	if (dtc.dataType == GRB_PRV_WIND_JET) {
@@ -2276,6 +2444,13 @@ void MainWindow::setMenubarAltitudeData (DataCode dtc)
 		checkAltitude (LV_ISOBARIC,400, mb->acAlt_400hpa, alt, dtc);
 		checkAltitude (LV_ISOBARIC,300, mb->acAlt_300hpa, alt, dtc);
 		checkAltitude (LV_ISOBARIC,200, mb->acAlt_200hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,100, mb->acAlt_100hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,50, mb->acAlt_50hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,20, mb->acAlt_20hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,10, mb->acAlt_10hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,7, mb->acAlt_7hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,5, mb->acAlt_5hpa, alt, dtc);
+		checkAltitude (LV_ISOBARIC,3, mb->acAlt_3hpa, alt, dtc);
 		checkAltitude (LV_ATMOS_ALL,0, mb->acAlt_Atmosphere, alt, dtc);
 	}
 }
@@ -2317,6 +2492,20 @@ void MainWindow::setMenuBarGeopotentialLines (
 		mb->acAlt_GeopotLine_300hpa->setChecked (true);
 	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,200) && drawGeopot)
 		mb->acAlt_GeopotLine_200hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,100) && drawGeopot)
+	mb->acAlt_GeopotLine_100hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,50) && drawGeopot)
+	mb->acAlt_GeopotLine_50hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,20) && drawGeopot)
+	mb->acAlt_GeopotLine_20hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,10) && drawGeopot)
+		mb->acAlt_GeopotLine_10hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,7) && drawGeopot)
+		mb->acAlt_GeopotLine_7hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,5) && drawGeopot)
+		mb->acAlt_GeopotLine_5hpa->setChecked (true);
+	else if (dtc.equals (GRB_GEOPOT_HGT,LV_ISOBARIC,3) && drawGeopot)
+		mb->acAlt_GeopotLine_3hpa->setChecked (true);
 	else {
 		mb->acAlt_GeopotLine_925hpa->setChecked (false);
 		mb->acAlt_GeopotLine_850hpa->setChecked (false);
@@ -2326,6 +2515,13 @@ void MainWindow::setMenuBarGeopotentialLines (
 		mb->acAlt_GeopotLine_400hpa->setChecked (false);
 		mb->acAlt_GeopotLine_300hpa->setChecked (false);
 		mb->acAlt_GeopotLine_200hpa->setChecked (false);
+		mb->acAlt_GeopotLine_100hpa->setChecked (false);
+		mb->acAlt_GeopotLine_50hpa->setChecked (false);
+		mb->acAlt_GeopotLine_20hpa->setChecked (false);
+		mb->acAlt_GeopotLine_10hpa->setChecked (false);
+		mb->acAlt_GeopotLine_7hpa->setChecked (false);
+		mb->acAlt_GeopotLine_5hpa->setChecked (false);
+		mb->acAlt_GeopotLine_3hpa->setChecked (false);
 	}
 	switch (step) {
 		case 1 :
@@ -2366,6 +2562,20 @@ void MainWindow::slot_GroupGeopotentialLines (QAction *act)
 		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,300);
 	else if (act == mb->acAlt_GeopotLine_200hpa)
 		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,200);
+	else if (act == mb->acAlt_GeopotLine_100hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,100);
+	else if (act == mb->acAlt_GeopotLine_50hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,50);
+	else if (act == mb->acAlt_GeopotLine_20hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,20);
+	else if (act == mb->acAlt_GeopotLine_10hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,10);
+	else if (act == mb->acAlt_GeopotLine_7hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,7);
+	else if (act == mb->acAlt_GeopotLine_5hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,5);
+	else if (act == mb->acAlt_GeopotLine_3hpa)
+		dtc.set (GRB_GEOPOT_HGT,LV_ISOBARIC,3);
 	else
 		dtc.set (GRB_TYPE_NOT_DEFINED,LV_TYPE_NOT_DEFINED,0);
 	

@@ -161,6 +161,9 @@ public:
     QAction *acView_Isotherms0;
     QMenu   *menuIsotherms0Step;
     QActionGroup *acView_GroupIsotherms0Step;
+        QAction *acView_Isotherms0Step1;
+        QAction *acView_Isotherms0Step2;
+        QAction *acView_Isotherms0Step5;
         QAction *acView_Isotherms0Step10;
         QAction *acView_Isotherms0Step20;
         QAction *acView_Isotherms0Step50;
@@ -180,6 +183,13 @@ public:
 		QAction *acView_Isotherms_400hpa;
 		QAction *acView_Isotherms_300hpa;
 		QAction *acView_Isotherms_200hpa;
+		QAction *acView_Isotherms_100hpa;
+		QAction *acView_Isotherms_50hpa;
+		QAction *acView_Isotherms_20hpa;
+		QAction *acView_Isotherms_10hpa;
+		QAction *acView_Isotherms_7hpa;
+		QAction *acView_Isotherms_5hpa;
+		QAction *acView_Isotherms_3hpa;
 	
     QMenu   *menuIsotherms;
     QMenu   *menuIsotherms_Step;
@@ -202,6 +212,13 @@ public:
 		QAction *acView_LinesThetaE_400hpa;
 		QAction *acView_LinesThetaE_300hpa;
 		QAction *acView_LinesThetaE_200hpa;
+		QAction *acView_LinesThetaE_100hpa;
+		QAction *acView_LinesThetaE_50hpa;
+		QAction *acView_LinesThetaE_20hpa;
+		QAction *acView_LinesThetaE_10hpa;
+		QAction *acView_LinesThetaE_7hpa;
+		QAction *acView_LinesThetaE_5hpa;
+		QAction *acView_LinesThetaE_3hpa;
     QActionGroup *groupLinesThetaE_Step;
         QAction *acView_LinesThetaE_Step1;
         QAction *acView_LinesThetaE_Step2;
@@ -231,6 +248,13 @@ public:
 		QAction *acAlt_400hpa;
 		QAction *acAlt_300hpa;
 		QAction *acAlt_200hpa;
+		QAction *acAlt_100hpa;
+		QAction *acAlt_50hpa;
+		QAction *acAlt_20hpa;
+		QAction *acAlt_10hpa;
+		QAction *acAlt_7hpa;
+		QAction *acAlt_5hpa;
+		QAction *acAlt_3hpa;
 		QAction *acAlt_Atmosphere;
 		
     ZeroOneActionGroup *acAlt_GroupGeopotLine;
@@ -242,6 +266,13 @@ public:
 		QAction *acAlt_GeopotLine_400hpa;
 		QAction *acAlt_GeopotLine_300hpa;
 		QAction *acAlt_GeopotLine_200hpa;
+		QAction *acAlt_GeopotLine_100hpa;
+		QAction *acAlt_GeopotLine_50hpa;
+		QAction *acAlt_GeopotLine_20hpa;
+		QAction *acAlt_GeopotLine_10hpa;
+		QAction *acAlt_GeopotLine_7hpa;
+		QAction *acAlt_GeopotLine_5hpa;
+		QAction *acAlt_GeopotLine_3hpa;
 
 	QMenu *menuGeopotStep;
     QActionGroup *acAlt_GroupGeopotStep;
